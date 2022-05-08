@@ -1,0 +1,20 @@
+<%= form_for @product do |form | %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :price %><br>
+    <%= form.text_area :price %>
+  </div>
+
+  <div>
+    <%= form.label :image %><br>
+    <%= form.file_field :image, direct_upload: true %>
+ </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
