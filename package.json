@@ -1,0 +1,32 @@
+{
+  "name": "rails-ecommerce",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjackson21/rails-ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjackson21/rails-ecommerce/issues"
+  },
+  "homepage": "https://github.com/rjackson21/rails-ecommerce#readme",
+  "dependencies": {
+    "@rails/webpacker": "^5.4.3",
+    "tailwindcss": "^1.9.6"
+  },
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
