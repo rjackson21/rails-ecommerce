@@ -1,32 +1,33 @@
+# frozen_string_literal: true
+
 class ProductsController < ApplicationController
-def index
+  def index
     @product = Product.last
     @products = Product.all
-end
+  end
 
-def new
+  def new
     @product = Product.new
-end
+  end
 
-def create
+  def create
     @product = Product.new(product_params)
     @products = Product.all
 
     if @product.save
-        redirect_to root_path
-    else 
-        render :new, status: :unprocessable_entity
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
     end
-end
+  end
 
-def show
-    @product= Product.find(params[:id])
-end
+  def show
+    @product = Product.find(params[:id])
+  end
 
-private
-def product_params
-  params.require(:product).permit(:name, :price, :image)
-end
+  private
 
-
+  def product_params
+    params.require(:product).permit(:name, :price, :image)
+  end
 end
