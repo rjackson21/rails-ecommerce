@@ -14,3 +14,7 @@
  *= require_self
  */
 
+.products-grid::after {
+  content: "";
+  flex: auto;
+}
