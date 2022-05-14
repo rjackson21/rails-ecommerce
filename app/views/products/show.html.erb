@@ -1,0 +1,12 @@
+<div class = "product-show">
+    <div class = "product-details">
+        <%= @product.name %>
+    </div>
+     <div>
+        $<%= @product.price %>
+    </div>
+    <div>
+        <%= image_tag(@product.image, class: "product-image mb-2") %>
+    </div>
+</div>
+
