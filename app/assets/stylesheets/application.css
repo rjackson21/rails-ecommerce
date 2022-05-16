@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .bg-aritzia {
+     background-color: rgb(247, 247, 247);
+ }

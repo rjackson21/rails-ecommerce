@@ -1,10 +1,15 @@
-<div class = "grid grid-cols-2">
+
+<div class = "flex grid-cols-2 justify-start">
     <div>
-        <%= image_tag(@product.image, class: "product-image mb-2") %>
+        <%= image_tag(@product.image, class: "product-image mb-2", width: 500, height: 632) %>
     </div>
-    <div class = "product-details">
-        <%= @product.name %>
-        $<%= @product.price %>
+    <div class = "flex justify-between">
+        <div class = "mx-10">
+            <%= @product.name %>
+        </div>
+        <div class= "mx-10">
+            $<%= @product.price %>
+        </div>
     </div>
 </div>
 
