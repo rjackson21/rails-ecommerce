@@ -57,6 +57,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_17_021410) do
     t.datetime "updated_at", null: false
     t.string "product_type"
     t.string "description"
+    t.string "brand"
   end
 
   create_table "users", force: :cascade do |t|
