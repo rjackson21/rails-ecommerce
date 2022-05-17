@@ -1,14 +1,22 @@
 
 <div class = "flex grid-cols-2 justify-start">
-    <div>
+    <div class="column1">
         <%= image_tag(@product.image, class: "product-image mb-2", width: 500, height: 632) %>
     </div>
-    <div class = "flex justify-between">
-        <div class = "mx-10">
-            <%= @product.name %>
+    <div class = "column2">
+        <div class= "product-details">
+            <div class = "">
+                <%= @product.name %>
+            </div>
+            <div class= "">
+                $<%= @product.price %>
+            </div>
         </div>
-        <div class= "mx-10">
-            $<%= @product.price %>
+        <div class="mt-3 text-gray-400 text-sm">
+            <%= (1..10).to_a.sample %> colors
+        </div>
+        <div>
+         Drop Down Menubutton 
         </div>
     </div>
 </div>
