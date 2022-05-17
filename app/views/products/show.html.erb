@@ -23,8 +23,8 @@
                 <div class= "rounded-full w-8 h-8 hover:border-black border-2 " style="background-color: <%= color.value %>"> </div>
             <% end %>
         </div>
-        <div class = "mt-10 flex justify-between">
-            <div>
+        <div class="text-xs mt-10 flex justify-between">
+            <div class="">
                 Model is 5'9"/175 cm wearing a size S
             </div>
             <div class="underline cursor-pointer">
@@ -50,7 +50,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                 </svg>
             </div>
+        </div>
+        <div class="mt-4 text-gray-500">
+            or 4 payments of <%= number_to_currency(@product.price/4.0) %> with Afterpay
+        </div>
 
+        <div class="mt-16">
+            <h2 class="text-lg">Enjoyable cross-fit </h2>
+            <p><%= @product.description %></p>
         </div>
     </div>
 </div>
