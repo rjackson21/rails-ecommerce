@@ -1,4 +1,70 @@
-<h2>Log in</h2>
+<div class="flex justify-between">
+  <div class="underline text-xs">
+    Back to Shopping
+  </div>
+  <div>
+    <%= link_to image_tag("https://www.aritzia.com/on/demandware.static/Sites-Aritzia_US-Site/-/default/dw9248a3f4/images/aritzia_skin/aritzia_logo.svg", width: 106, height: 21), root_path%>
+  </div>
+  <div class="underline text-xs">
+    Need Help?
+  </div>
+</div>
+
+<div class="flex justify-center mt-12">
+  SIGN IN OR CREATE AN ACCOUNT TO UNLOCK:
+</div>
+
+<div class="flex ml-16 mt-10 text-sm">
+    <div class="flex w-1/5">
+      <div class="mr-4">
+        Free shipping
+      </div>
+      <div>
+        <%= image_tag("https://www.aritzia.com/on/demandware.static/-/Library-Sites-Aritzia_Shared/default/dw7cb46db8/2021/87-value-props/shared/icon-free-shipping.svg", width: 19, height: 17) %>
+      </div>
+    </div>
+    <div class="flex w-1/5">
+      <div class="mr-4">
+        Private Sales
+      </div>
+      <div>
+        <%= image_tag("https://www.aritzia.com/on/demandware.static/-/Library-Sites-Aritzia_Shared/default/dw47166160/2021/87-value-props/shared/private-sale.svg", width: 19, height: 17) %>
+      </div>
+    </div>
+    <div class="flex w-1/5">
+      <div class="mr-4">
+        Express checkout
+      </div>
+      <div>
+        <%= image_tag("https://www.aritzia.com/on/demandware.static/-/Library-Sites-Aritzia_Shared/default/dw105e6518/2021/87-value-props/shared/express-checkout.svg", width: 19, height: 17) %>
+      </div>
+    </div>
+    <div class="flex w-1/5">
+      <div class="mr-4">
+        My List
+      </div>
+      <div>
+        <%= image_tag("https://www.aritzia.com/on/demandware.static/-/Library-Sites-Aritzia_Shared/default/dw79bcf17a/2021/87-value-props/shared/my-list.svg", width: 19, height: 17) %>
+      </div>
+    </div>
+    <div class="flex w-1/5">
+      <div class="mr-4">
+        Order Tracking
+      </div>
+      <div>
+        <%= image_tag("https://www.aritzia.com/on/demandware.static/-/Library-Sites-Aritzia_Shared/default/dw67b15862/2021/87-value-props/shared/order-tracking.svg", width: 19, height: 17) %>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
