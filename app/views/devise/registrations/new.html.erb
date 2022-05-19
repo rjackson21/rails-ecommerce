@@ -1,4 +1,14 @@
-<h2>Sign up</h2>
+<div class="flex justify-between">
+  <div class="underline text-xs">
+    Back to Shopping
+  </div>
+  <div>
+    <%= link_to image_tag("https://www.aritzia.com/on/demandware.static/Sites-Aritzia_US-Site/-/default/dw9248a3f4/images/aritzia_skin/aritzia_logo.svg", width: 106, height: 21), root_path%>
+  </div>
+  <div class="underline text-xs">
+    Need Help?
+  </div>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
