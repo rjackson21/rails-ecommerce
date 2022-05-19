@@ -48,13 +48,25 @@
           By clicking "Create Account," I agree that I have read and accept the <span class="underline"> Terms of Use. </span>
         </div>
 
-        <div class="flex bg-black text-white actions">
-          <%= f.submit "Sign up" %>
+        <div class="mt-6 actions">
+          <%= f.submit "Create Account", class: "w-full bg-black text-white h-14 text-xs" %>
         </div>
-      <% end %>
+      <% end %> 
+    </div>
+
+    <div class="flex ml-6 mt-4 justify-between text-xs" >
+      <div class="underline">
+        Privacy Policy
+      </div>
+      <div>
+         Have an account? 
+         <%= link_to "Sign In", new_user_session_path, class: "underline" %>
+      </div>
     </div>
   </div>
 </div>
+
+
 
 
 
