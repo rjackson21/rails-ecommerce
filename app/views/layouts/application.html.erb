@@ -14,8 +14,9 @@
 
   <body class="bg-aritzia">
     <main class="mx-10 mt-5">
-    <!--  <%= render "layouts/navbar" %> -->
-
+    <% if params[:controller]== 'products' %>
+      <%= render "layouts/navbar" %> 
+    <% end %>
       <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
