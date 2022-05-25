@@ -1,6 +1,6 @@
 class CartProductsController < ApplicationController
   def create
-    products_in_cart = current_user.cart.products # Products
+    products_in_cart = current_user.cart.products
 
     if products_in_cart.map(&:id).include?(params[:product_id].to_i)
       product_in_cart = products_in_cart.where(id: params[:product_id]).first
