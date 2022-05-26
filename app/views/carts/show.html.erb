@@ -1,0 +1,40 @@
+<div>
+  <h1>
+    This is the cart for <%= current_user.email %>
+  </h1>
+
+  <h2>
+    Subtotal: <%= @cart_subtotal %>
+  </h2>
+
+<div class="products-grid flex flex-wrap justify-center space-x-2 ">
+  <% @products.each do |product| %>
+    <div class="flex-none mb-5">
+      <div>
+        <%= link_to image_tag(product.image, class: "product-image mb-2", width: 390, height: 550), product_path(product) %>
+      </div>
+
+      <div class="product-details mx-3">
+        <div class="flex justify-between">
+          <div>
+            <%= link_to product.name, product_path(product) %>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          $<%= product.price %>
+        </div>
+        <div class="mt-3 text-gray-400 text-sm">
+          <%= @cart_products.detect { |cp| cp.product_id == product.id }.quantity %> in cart
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
