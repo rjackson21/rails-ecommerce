@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   resources :cart_products, only: [:create]
 
-  root to: 'products#index'
+
   resources :products
+
+  get 'home/home'
+
+  root to: 'home#home'
 end
