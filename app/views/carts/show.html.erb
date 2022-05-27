@@ -1,3 +1,12 @@
+<div>
+  <h1>
+    This is the cart for <%= current_user.email %>
+  </h1>
+
+  <h2>
+    Subtotal: <%= @cart_subtotal %>
+  </h2>
+
 <div class="products-grid flex flex-wrap justify-center space-x-2 ">
   <% @products.each do |product| %>
     <div class="flex-none mb-5">
@@ -21,9 +30,11 @@
           $<%= product.price %>
         </div>
         <div class="mt-3 text-gray-400 text-sm">
-          <%= (1..10).to_a.sample %> colors
+          <%= @cart_products.detect { |cp| cp.product_id == product.id }.quantity %> in cart
         </div>
+
       </div>
     </div>
   <% end %>
+  </div>
 </div>

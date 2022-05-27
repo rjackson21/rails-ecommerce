@@ -6,7 +6,22 @@
 
   <div>
     <%= form.label :price %><br>
-    <%= form.text_area :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :brand %><br>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div>
+    <%= form.label :product_type %><br>
+    <%= form.text_field :product_type %>
   </div>
 
   <div>

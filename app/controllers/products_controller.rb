@@ -23,11 +23,12 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @colors = Color.all
   end
 
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :image)
+    params.require(:product).permit(:name, :price, :image, :description, :product_type, :brand)
   end
 end
