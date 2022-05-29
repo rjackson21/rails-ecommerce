@@ -14,12 +14,29 @@
 
   <body class="bg-aritzia">
     <main class="mx-10 mt-5">
-    <% if params[:controller]== 'products' || 'home' %>
-      <%= render "layouts/navbar" %> 
-    <% end %>
+      <% if params[:controller]== 'sessions' || params[:controller] == 'registrations' %>
+        <div class="flex justify-between">
+          <div class="underline text-xs">
+            <%= link_to "Back to Shopping", root_path %>
+          </div>
+          <div>
+            <%= link_to image_tag("https://www.aritzia.com/on/demandware.static/Sites-Aritzia_US-Site/-/default/dw9248a3f4/images/aritzia_skin/aritzia_logo.svg", width: 106, height: 21), root_path%>
+          </div>
+          <div class="underline text-xs">
+            Need Help?
+          </div>
+        </div>
+      <% else %>
+        <%= render "layouts/navbar" %> 
+      <% end %>
+
       <%= yield %>
+
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+
     </main>
+
+    <%= render "layouts/footer" %>
   </body>
 </html>
