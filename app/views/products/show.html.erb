@@ -59,7 +59,7 @@
 
       <form class="favorite-ribbon w-2/12 text-white border-l-2 pl-2 bg-black h-full pl-5 pt-2" method="post" action="/favorites?product_id=<%= @product.id %>">
         <button type="submit">
-          <% if @product.favorited_by?(current_user) %>
+          <% if current_user && @product.favorited_by?(current_user) %>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
               <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
             </svg>
