@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :cart_products, only: [:create]
+  resources :favorites, only: [:create, :destroy]
 
   root to: 'products#index'
   resources :products
