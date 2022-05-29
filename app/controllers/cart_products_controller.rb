@@ -16,6 +16,6 @@ class CartProductsController < ApplicationController
       )
     end
 
-    redirect_to user_cart_path(current_user)
+    redirect_to "/cart"
   end
 end
