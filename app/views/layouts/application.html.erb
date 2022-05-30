@@ -14,7 +14,6 @@
 
   <body class="bg-aritzia">
     <main class="mx-10 mt-5">
-<<<<<<< HEAD
       <% if params[:controller]== 'sessions' || params[:controller] == 'registrations' %>
         <div class="flex justify-between">
           <div class="underline text-xs">
@@ -31,11 +30,6 @@
         <%= render "layouts/navbar" %> 
       <% end %>
 
-=======
-    <% if params[:controller]== 'products' || 'home' %>
-      <%= render "layouts/navbar" %> 
-    <% end %>
->>>>>>> 75889146129a7787483fc6eedebd44c08275d460
       <%= yield %>
 
       <p class="notice"><%= notice %></p>
