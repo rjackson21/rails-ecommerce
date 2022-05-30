@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
-  get 'cart_products/create'
-  get 'carts/show'
+  root to: 'home#home'
+
+
   devise_for :users, :controllers => { :registrations => "registrations" }
 
-  resources :users do
-    resource :cart, only: [:show], on: :member
-  end
-
   resources :cart_products, only: [:create]
-
+  resources :favorites, only: [:create, :destroy]
+  
+  get "/cart", to: "carts#show"
 
   resources :products
 
-  get 'home/home'
-
-  root to: 'home#home'
+  resources :cart_products, only: [:create]
 end
