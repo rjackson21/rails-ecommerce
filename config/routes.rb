@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'home#home'
-
-
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   resources :cart_products, only: [:create]
@@ -12,4 +9,6 @@ Rails.application.routes.draw do
   resources :products
 
   resources :cart_products, only: [:create]
+
+  root to: 'home#home'
 end
