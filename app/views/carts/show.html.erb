@@ -1,7 +1,17 @@
-<div>
-  <h1>
-    This is the cart for <%= current_user.email %>
-  </h1>
+<div class="flex justify-left">
+  <div class="flex mr-2 hover:underline">
+    <%= link_to "New", 'products#index' %>
+  </div>
+  <div class="flex mx-2 hover:underline">
+    <%= link_to "Clothing", 'products#index' %>
+  </div>
+  <div class="flex mx-2 hover:underline">
+    <%= link_to "Back In", 'products#index' %>
+  </div>
+  <div class="flex mx-2 hover:underline">
+    <%= link_to "Brands", 'products#index' %>
+  </div>
+</div>
 
   <h2>
     Subtotal: <%= @cart_subtotal %>
