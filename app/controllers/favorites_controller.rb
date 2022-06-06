@@ -17,4 +17,8 @@ class FavoritesController < ApplicationController
 
     redirect_back(fallback_location: root_path)
   end
+
+  def index
+    @favorites = Favorite.all
+  end
 end

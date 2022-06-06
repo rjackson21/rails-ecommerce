@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   resources :cart_products, only: [:create]
 
+  resources :favorites, only: [:index]
+
   root to: 'home#home'
 end
