@@ -25,59 +25,59 @@
   My Bag
 </div>
 
-<div class="flex">
-  <div class="flex w-2/3 py-6 border-y-2 mb-10">
+<div class="flex"> 
+  <div class="flex flex-col w-2/3 mb-10 border-t-2">
     <% @products.each do |product| %>
-      <div class="flex">
-        <div class="flex">
-          <div>
-            <%= link_to image_tag(product.image, class: "product-image mb-2", width: 114, height: 155), product_path(product) %>            
+    <div class="text-xs">
+      <div class="flex h-min py-6 border-b-2" id="1">
+        <div>
+          <%= link_to image_tag(product.image, class: "product-image mb-2", width: 114, height: 155), product_path(product) %>            
+        </div>
+        <div class="flex flex-col justify-between">
+        <div class="flex flex-col" id="2">
+          <div class="">
+              <%= link_to product.brand, product_path(product) %>
+          </div>                
+          <div class="">
+            <%= link_to product.name, product_path(product) %>
           </div>
-
-          <div class="product-details mx-3 flex flex-col justify-between text-xs">
-            <div class="flex flex-col">
-              <div class="mb-2">
-                <%= link_to product.brand, product_path(product) %>
-              </div>                
-              <div class="mb-2">
-                <%= link_to product.name, product_path(product) %>
-              </div>
-              <div>
-                $<%= product.price %>
-              </div>
+          <div>
+            $<%= product.price %>
+          </div>
+          <div class="flex flex-col text-gray-500">
+            <div>
+              <form method="post" action="/favorites?product_id=<%= product.id %>">
+              <button type="submit" class="underline mb-2">
+                Move to List
             </div>
-            <div class="flex flex-col text-gray-500">
-              <div>
-                <form method="post" action="/favorites?product_id=<%= product.id %>">
-                <button type="submit" class="underline mb-2">
-                  Move to List
-              </div>
-              <div>
-                #98074
-              </div>
+            <div>
+              #98074
             </div>
+          </div>
           </div>
         </div>
-          
-        <div class="text-xs">
+
+        <div class="" id="3">
           Heather Oat Beige
         </div>
 
-        <div class="text-gray-400 text-sm">
-          <%= @cart_products.detect { |cp| cp.product_id == product.id }.quantity %> in cart
+        <div class="" id="4">
+          <div class="text-gray-400 text-sm">
+            <%= @cart_products.detect { |cp| cp.product_id == product.id }.quantity %> in cart
+          </div>
         </div>
 
-
-
+        <div>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
-
+        </div>
       </div>
     <% end %>
   </div>
+   </div>
+   </div>       
 
-  
 
 
 
@@ -86,16 +86,16 @@
       <div class="mb-4">
           Order Summary
       </div>
-      <div class="flex justify-between text-sm mb-2">
+      <div class="flex justify-between text-xs mb-2">
         <div>
-          Deliver to me (<%=@cart.products.count %>) 
+          Deliver to Me (<%=@cart.products.count %>) 
         </div>
         <div>
           $<%= @cart_subtotal %>
         </div>
       </div>
 
-      <div class="flex justify-between text-sm mb-2">
+      <div class="flex justify-between text-xs mb-2">
         <div>
           Shipping estimate 
         </div>
@@ -104,7 +104,7 @@
         </div>
       </div>
 
-      <div class="flex justify-between text-sm mb-2">
+      <div class="flex justify-between text-xs mb-2">
         <div>
           Taxes estimate
         </div>
@@ -114,7 +114,7 @@
       </div>
     </div>
 
-    <div class="flex justify-between text-sm mb-2 mt-4 p-4">
+    <div class="flex justify-between text-xs mb-2 mt-4 p-4">
       <div>
         Estimated Total
       </div>
@@ -126,5 +126,45 @@
     <div class="flex items-center justify-center bg-black text-white h-14 cursor-pointer hover:opacity-90 transition ease-in-out">
       Checkout
     </div>
+  </div>
+</div>
+
+<div class="flex">
+  <div class="flex justify-between  mb-12 p-4 w-2/3 bg-summary text-black">
+    <div class="mx-4">
+      <div class="mb-2">
+        Free Shipping
+      </div>
+      <div>
+        Free standard shipping when signed into your Aritzia account.
+      </div>
+      <div class="underline">
+        <%= link_to "Details", '/users/sign_in' %>
+      </div>
+    </div>
+    <div>
+      <div class="mb-2">
+        Free & Easy Returns
+      </div>
+      <div>
+        Easily return your online purchaces for free by mail or at any Aritzia boutique.
+      </div>
+      <div class="underline">
+        <%= link_to "Details", '/users/sign_in' %>
+      </div>
+    </div>
+    <div>
+      <div class="mb-2">
+        Secure Payment
+      </div>
+      <div>
+        We accept most credit cards, PayPal, Apple Pay and gift cards.
+      </div>
+      <div class="underline">
+        <%= link_to "Details", '/users/sign_in' %>
+      </div>
+    </div>
+  </div>
+  <div class="w-1/3 mx-12">
   </div>
 </div>
