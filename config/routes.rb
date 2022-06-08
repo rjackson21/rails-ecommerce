@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :checkouts
+
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   resources :cart_products, only: [:create]
