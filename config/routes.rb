@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'checkouts/new'
+  get 'checkouts/index'
+  post "checkouts", to: "checkouts#create"
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   resources :cart_products, only: [:create]
