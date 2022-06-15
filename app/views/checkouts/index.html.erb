@@ -1,0 +1,16 @@
+<h1>Warehouse Checkouts Ops Page</h1>
+
+<% @checkouts.each do |checkout| %>
+  <h2><%= checkout.name %></h2>
+    <% products = CartProduct.where(product_id: checkout.products.map(&:id)).where(checked_out: true).map(&:product) %>
+
+
+    <% products.each do |product|%>
+     <%= product.name %>
+    <% end %>
+
+    <br>
+    <br>
+    <br>
+    <br>
+<% end %>

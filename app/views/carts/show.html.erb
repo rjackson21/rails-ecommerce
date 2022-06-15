@@ -71,7 +71,9 @@
 
           <div>
             <div class="text-gray-400 text-sm">
+              <% if @cart_products.length > 0 %>
               <%= @cart_products.detect { |cp| cp.product_id == product.id }.quantity %> in cart
+              <% end %>
             </div>
           </div>
 
@@ -94,11 +96,11 @@
   <div class="w-1/3 bg-summary p-4 mx-12">
     <div class="border-b-2 p-6">
       <div class="mb-4">
-          Order Summary
+        Order Summary
       </div>
       <div class="flex justify-between text-xs mb-2">
         <div>
-          Deliver to Me (<%=@cart.products.count %>) 
+          Deliver to Me (<%=@products.count %>) 
         </div>
         <div>
           $<%= @cart_subtotal %>
@@ -133,15 +135,11 @@
       </div>
     </div>
 
-    <div class="flex items-center justify-center bg-black text-white h-14 cursor-pointer hover:opacity-90 transition ease-in-out">
-      Checkout
-    </div>
+    <%= link_to "Checkout", "/checkouts/new", class: "flex items-center justify-center bg-black text-white h-14 cursor-pointer hover:opacity-90 transition ease-in-out" %>
   </div>
-  </div>
+</div>
 
 
-
- 
 
 
 <div class="flex">
