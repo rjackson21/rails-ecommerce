@@ -26,13 +26,16 @@ class CartProductsController < ApplicationController
     cart = current_user.cart
     
     cart_product = CartProduct.find_by(
-    product_id: params[:product_id],
-    cart_id: cart.id,
-    checked_out: false
+      product_id: params[:product_id],
+      cart_id: cart.id,
+      checked_out: false
     )
-    
+
     if cart_product
+      p "CART PRODUCT FOUND"
       cart_product.destroy
+    else
+      p "CART PRODUCT NOT FOUND"
     end
     
     redirect_to '/cart'
