@@ -32,12 +32,9 @@ class CartProductsController < ApplicationController
     )
 
     if cart_product
-      p "CART PRODUCT FOUND"
       cart_product.destroy
-    else
-      p "CART PRODUCT NOT FOUND"
     end
-    
+
     redirect_to '/cart'
   end
 end
