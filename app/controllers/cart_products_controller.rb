@@ -21,4 +21,20 @@ class CartProductsController < ApplicationController
 
     redirect_to '/cart'
   end
+
+  def destroy
+    cart = current_user.cart
+    
+    cart_product = CartProduct.find_by(
+      product_id: params[:product_id],
+      cart_id: cart.id,
+      checked_out: false
+    )
+
+    if cart_product
+      cart_product.destroy
+    end
+
+    redirect_to '/cart'
+  end
 end
