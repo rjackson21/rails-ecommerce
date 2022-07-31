@@ -9,12 +9,12 @@ This is a Rails e-commerce app, styled after Aritzia's website.
 4.Install the dependencies by running `bundle`
 5. Start the Rails server by running `rails server` in the project root
 
-The ruby version used is 2.7.0 nd rails version 7.0.2 
+The ruby version used is 2.7.0 and rails version 7.0.2 
 
 The application uses PostgreSQL as its database, so this must be installed.
 
 Images are uploaded to Amazon AWS S3, so an account with Amazon is needed (only in production).
 
-Stripel for payments is integrated.
+Stripe for payments is integrated.
 
 
